@@ -29,4 +29,4 @@ function changeTheme(e) {
     document.documentElement.setAttribute("data-theme", "light");
   }
 }
-toggleBtn.addEventListener("change", changeTheme);
+toggleBtn.addEventListener("click", changeTheme);

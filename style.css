@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
-/* CSS RESET */
+/* CSS RESET ----------------------------------------------------------------*/
 html {
   box-sizing: border-box;
   font-size: 12px;
@@ -34,7 +34,7 @@ ul {
   list-style: none;
 }
 
-/* VARIABLES */
+/* VARIABLES ----------------------------------------------------------------*/
 
 :root {
   --clr__000: hsl(0, 0%, 100%);
@@ -51,7 +51,7 @@ ul {
   --clr__100: hsl(215, 44%, 11%);
 }
 
-/* PAGE LAYOUT */
+/* PAGE LAYOUT ---------------------------------------------------------------- */
 body {
   margin: 2rem auto;
   min-width: 300px;
@@ -88,7 +88,7 @@ main {
   gap: 2rem;
   padding: 2rem 2rem 0 2rem;
 }
-
+/* CONTENT ---------------------------------------------------------------- */
 .header {
   font-weight: 700;
   font-size: 1.3rem;
@@ -98,6 +98,8 @@ main {
   line-height: 1.5rem;
   color: var(--clr__300);
 }
+
+/* USER ---------------------------------------------------------------- */
 .user {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -138,6 +140,8 @@ main {
   font-size: 20px;
   cursor: pointer;
 }
+
+/* SHARE MENU---------------------------------------------------------------- */
 .share {
   background-color: var(--clr__400);
   color: var(--clr__200);
@@ -161,13 +165,13 @@ main {
 }
 
 .share > ul {
-  font-size: 24px;
+  font-size: 2rem;
   color: var(--clr__100);
   display: flex;
   gap: 2rem;
   align-items: center;
 }
-/* ATTRIBUTION */
+/* ATTRIBUTION ----------------------------------------------------------------*/
 .attribution {
   font-size: 1rem;
   text-align: center;
@@ -176,7 +180,7 @@ main {
 .attribution a {
   color: var(--clr__400);
 }
-/* THEME SWITCH   */
+/* THEME SWITCH ----------------------------------------------------------------*/
 .theme__switch__container {
   position: absolute;
   display: flex;
@@ -233,11 +237,11 @@ input:checked + .slide__btn {
   color: var(--clr__400);
 }
 
-/* SWITCHING THEMES TRANSITION  */
+/* SWITCHING THEMES TRANSITION----------------------------------------------------------------*/
 * {
-  transition: 600ms;
+  transition: 1000ms;
 }
-/* MEDIA QUERY FOR DESKTOP  */
+/* MEDIA QUERY FOR DESKTOP----------------------------------------------------------------*/
 @media screen and (min-width: 800px) {
   body {
     max-width: 1440px;

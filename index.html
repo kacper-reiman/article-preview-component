@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body>
+    <div class="theme__switch__container">
+      <label for="checkbox" class="theme__switch">
+        <input type="checkbox" id="checkbox" />
+        <div class="slide__btn">
+          <div class="btn__label">Toggle theme</div>
+        </div>
+      </label>
+    </div>
+    <main>
+      <section class="img__wrapper"></section>
+      <section class="content__wrapper">
+        <span class="header">
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </span>
+        <p class="text">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+        <div class="user">
+          <img
+            src="images/avatar-michelle.jpg"
+            alt="user__avatar"
+            id="user__avatar"
+          />
+          <span class="name">
+            <b>Michelle Appleton</b> <br />
+            28 Jun 2020
+          </span>
+          <ion-icon name="arrow-redo" id="open__btn"></ion-icon>
+        </div>
+        <span class="share">
+          Share
+          <ul>
+            <li>
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </li>
+            <li>
+              <ion-icon name="logo-facebook"></ion-icon>
+            </li>
+            <li>
+              <ion-icon name="logo-twitter"></ion-icon>
+            </li>
+          </ul>
+          <ion-icon name="arrow-redo" id="close__btn"></ion-icon>
+        </span>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.frontendmentor.io/profile/kacper-reiman"
+        target="_blank"
+        >Kacper Reiman</a
+      >.
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
