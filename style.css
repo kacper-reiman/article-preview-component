@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+/* CSS RESET */
+html {
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: "Manrope";
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+img {
+  width: 100%;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* VARIABLES */
+
+:root {
+  --clr__000: hsl(0, 0%, 100%);
+  --clr__100: hsl(210, 46%, 95%);
+  --clr__200: hsl(212, 23%, 69%);
+  --clr__300: hsl(214, 17%, 51%);
+  --clr__400: hsl(217, 19%, 35%);
+}
+[data-theme="dark"] {
+  --clr__000: hsl(226, 25%, 17%);
+  --clr__400: hsl(218, 7%, 77%);
+  --clr__300: hsl(209, 16%, 44%);
+  --clr__200: hsl(214, 20%, 42%);
+  --clr__100: hsl(215, 44%, 11%);
+}
+
+/* PAGE LAYOUT */
+body {
+  margin: 2rem auto;
+  min-width: 300px;
+  max-width: 375px;
+  min-height: 500px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--clr__100);
+  overflow: hidden;
+}
+
+main {
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--clr__000);
+}
+.img__wrapper {
+  height: 15rem;
+  background-image: url(images/drawers.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.content__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 2rem 0 2rem;
+}
+
+.header {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--clr__400);
+}
+.text {
+  line-height: 1.5rem;
+  color: var(--clr__300);
+}
+.user {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  color: var(--clr__200);
+  margin-bottom: 1rem;
+}
+
+.name {
+  justify-items: left;
+}
+.user b {
+  color: var(--clr__400);
+}
+
+#user__avatar {
+  max-width: 3.5rem;
+  border-radius: 50%;
+}
+#open__btn {
+  justify-self: right;
+  background-color: var(--clr__100);
+  color: var(--clr__300);
+}
+#open__btn:hover {
+  background-color: var(--clr__400);
+  color: var(--clr__000);
+}
+#close__btn:hover {
+  background-color: var(--clr__300);
+  color: var(--clr__000);
+}
+#open__btn,
+#close__btn {
+  padding: 0.7rem;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+.share {
+  background-color: var(--clr__400);
+  color: var(--clr__200);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  min-width: 15rem;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -7rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  transform: translateY(100%);
+  transition: 0.5s linear;
+}
+
+.active {
+  transform: translateY(0%);
+  transition: 0.5s linear;
+}
+
+.share > ul {
+  font-size: 24px;
+  color: var(--clr__100);
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+/* ATTRIBUTION */
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--clr__300);
+}
+.attribution a {
+  color: var(--clr__400);
+}
+/* THEME SWITCH   */
+.theme__switch__container {
+  position: absolute;
+  display: flex;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.btn__label {
+  position: relative;
+  right: 4rem;
+  color: var(--clr__200);
+}
+
+.theme__switch {
+  display: block;
+
+  width: 5rem;
+  position: relative;
+  top: 0;
+}
+
+.theme__switch input {
+  display: none;
+}
+
+.slide__btn {
+  background-color: var(--clr__400);
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s;
+  border-radius: 3rem;
+  cursor: pointer;
+  height: 2.7rem;
+}
+.slide__btn:before {
+  background-color: var(--clr__100);
+  position: absolute;
+  content: "";
+  bottom: 0.35rem;
+  height: 2rem;
+  left: 0.3rem;
+  width: 2rem;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+input:checked + .slide__btn:before {
+  transform: translateX(2rem);
+  background-color: var(--clr__100);
+}
+input:checked + .slide__btn {
+  background-color: var(--clr__200);
+  color: var(--clr__400);
+}
+
+/* SWITCHING THEMES TRANSITION  */
+* {
+  transition: 600ms;
+}
+/* MEDIA QUERY FOR DESKTOP  */
+@media screen and (min-width: 800px) {
+  body {
+    max-width: 1440px;
+  }
+  main {
+    flex-direction: row;
+    min-width: 60rem;
+  }
+  .img__wrapper {
+    width: 40%;
+    height: auto;
+  }
+  .content__wrapper {
+    max-width: 60%;
+  }
+}
